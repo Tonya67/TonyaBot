@@ -1,0 +1,119 @@
+{
+  "name": "delete voice",
+  "temp": "pl",
+  "event-type": "22",
+  "_id": "hnzhg",
+  "actions": [
+    {
+      "member": "2",
+      "varName": "pl",
+      "info": "19",
+      "storage": "1",
+      "varName2": "voicechanel",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "3",
+      "varName": "voicechanel",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID VOICE",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "voicechanel",
+      "comparison": "6",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable Type"
+    },
+    {
+      "storage": "1",
+      "varName": "ID VOICE",
+      "comparison": "1",
+      "value": "!!!!!!!!!!!!!!!!!!ID OF UR *CREATE ROOM* VOICE",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "3",
+      "varName": "voicechanel",
+      "info": "13",
+      "storage": "1",
+      "varName2": "parent",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "category": "1",
+      "varName": "parent",
+      "info": "0",
+      "storage": "1",
+      "varName2": "idcate",
+      "name": "Store Category Info"
+    },
+    {
+      "storage": "1",
+      "varName": "idcate",
+      "comparison": "1",
+      "value": "!!!!!!!!!!!!!!!!!!ID OF CATEGORY",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "3",
+      "varName": "voicechanel",
+      "info": "9",
+      "storage": "1",
+      "varName2": "length",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "length",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "length",
+      "comparison": "4",
+      "value": "1",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "length",
+      "comparison": "3",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "3",
+      "varName": "voicechanel",
+      "name": "Delete Channel"
+    }
+  ],
+  "temp2": "pl1"
+}
