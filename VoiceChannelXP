@@ -1,0 +1,73 @@
+{
+  "name": "Joined Voice Channel",
+  "temp": "oldUser",
+  "event-type": "22",
+  "_id": "LzZhu",
+  "actions": [
+    {
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "// Member Joined Voice Channel\n\nconst oldChannel = tempVars('oldUser').voiceChannel\nconst newChannel = tempVars('newUser').voiceChannel\n\nif (!oldChannel && newChannel) {\n  this.storeValue(newChannel, 1, 'voiceChannel', cache)\n  this.callNextAction(cache)\n}\n",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "time": "60",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "2",
+      "varName": "newUser",
+      "info": "4",
+      "varName2": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "member": "2",
+      "varName": "newUser",
+      "info": "8",
+      "varName2": "",
+      "iftrue": "2",
+      "iftrueVal": "2",
+      "iffalse": "2",
+      "iffalseVal": "5",
+      "name": "Check If Member"
+    },
+    {
+      "member": "2",
+      "varName": "newUser",
+      "dataName": "cash",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "member-cash",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"member-cash\")}",
+      "info": "0",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "cash-receive",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "2",
+      "varName": "newUser",
+      "dataName": "cash",
+      "changeType": "0",
+      "value": "tempVars(\"cash-receive\")",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "2",
+      "name": "Jump to Action"
+    }
+  ],
+  "temp2": "newUser"
+}
